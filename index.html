@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niel John S. Rebucas | Creative Website</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #0b1120;
+    color: white;
+}
+header {
+    background: #111827;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #0284c7;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #38bdf8;
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+nav button:hover,
+nav button.active {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
+}
+.page {
+    display: none;
+    min-height: 82vh;
+    padding: 70px 8%;
+    animation: fade 0.4s ease;
+}
+.page.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+@keyframes fade {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+h2 {
+    font-size: 35px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    font-size: 17px;
+}
+.highlight {
+    color: #38bdf8;
+}
+.btn {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: #38bdf8;
+    transform: translateY(-3px);
+}
+#home {
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg, #0b1120, #172554, #0b1120
+    );
+}
+#home p {
+    max-width: 700px;
+}
+.services-container,
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+.card {
+    flex: 1 1 250px;
+    max-width: 350px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px #0284c733;
+}
+.card .symbol {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.portfolio-card {
+    background: #111827;
+    border-radius: 15px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    flex: 1 1 250px;
+    max-width: 350px;
+    transition: 0.3s;
+}
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+.portfolio-image {
+    height: 180px;
+    background: linear-gradient(135deg, #172554, #0284c7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+}
+.portfolio-info {
+    padding: 25px;
+}
+.about-box {
+    max-width: 850px;
+    padding: 35px;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 15px;
+}
+.about-box p {
+    margin-bottom: 15px;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.contact-info,
+.contact-form {
+    flex: 1 1 280px;
+    max-width: 500px;
+    background: #111827;
+    padding: 30px;
+    border: 1px solid #334155;
+    border-radius: 15px;
+}
+.contact-info p {
+    margin: 15px 0;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background: #0b1120;
+    color: white;
+    font-size: 16px;
+}
+textarea {
+    height: 130px;
+    resize: vertical;
+}
+footer {
+    background: #111827;
+    border-top: 1px solid #1e40af;
+    text-align: center;
+    padding: 25px;
+}
+footer p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav {
+        justify-content: center;
+    }
+    nav button {
+        font-size: 13px;
+        padding: 8px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .page {
+        padding: 50px 6%;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+    <div class="logo">NNIEL CREATIVES</div>
+    <nav>
+        <button class="active"
+        onclick="showPage('home', this)">Home</button>
+        <button onclick="showPage('services', this)">
+        Services</button>
+        <button onclick="showPage('portfolio', this)">
+        Portfolio</button>
+        <button onclick="showPage('about', this)">
+        About</button>
+        <button onclick="showPage('contacts', this)">
+        Contacts</button>
+    </nav>
+</header>
+<section id="home" class="page active">
+    <h1>Welcome to My <span class="highlight">Website</span></h1>
+    <p>
+        Hello! I'm Niel John S. Rebucas, an aspiring Animation and
+        Multimedia Arts student passionate about creativity,
+        digital design, video editing, and technology.
+        Explore my website to discover my services,
+        creative projects, and personal background.
+    </p>
+    <button class="btn" onclick="goTo('portfolio')">
+        View My Work
+    </button>
+</section>
+<section id="services" class="page">
+    <h3>What I Offer</h3>
+    <h2>Services</h2>
+    <p>
+        I offer creative and digital services to help
+        bring ideas to life through multimedia.
+    </p>
+    <div class="services-container">
+        <div class="card">
+            <div class="symbol">🎨</div>
+            <h3>Graphic Design</h3>
+            <p>
+                Posters, flyers, logos, social media
+                graphics, and creative digital designs.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">🎬</div>
+            <h3>Video Editing</h3>
+            <p>
+                Video editing, transitions, visual effects,
+                and engaging video content for projects.
+            </p>
+        </div>
+        <div class="card">
+            <div class="symbol">📸</div>
+            <h3>Photography</h3>
+            <p>
+                Capture your special moments with beautiful photos that tell 
+                your story and preserve your memories.
+            </p>
+        </div>
+    </div>
+</section>
+<section id="portfolio" class="page">
+    <h3>My Work</h3>
+    <h2>Portfolio</h2>
+    <p>
+        A collection of creative works and projects
+        related to design and multimedia.
+    </p>
+    <div class="portfolio-container">
+        <div class="portfolio-card">
+            <img src="picture.png" alt="My Image"width="100%" height="auto">
+            <div class="portfolio-info">
+                <h3>Graphic Design</h3>
+                <p>
+                    Creative posters, flyers, and
+                    digital illustrations.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="picture2.jpg" alt="My Image"width="100%" height="80%">
+            <div class="portfolio-info">
+                <h3>Video Projects</h3>
+                <p>
+                    Video editing and multimedia
+                    storytelling projects.
+                </p>
+            </div>
+        </div>
+        <div class="portfolio-card">
+           <img src="picture3.jpg" alt="My Image"width="100%" height="auto">
+            <div class="portfolio-info">
+                <h3>Photography</h3>
+                <p>
+                   Capture your special moments with creative, 
+                   high-quality photography that turns memories into timeless stories.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="page">
+    <h3>Get To Know Me</h3>
+    <h2>About Me</h2>
+    <div class="about-box">
+        <p>
+            My name is Niel John Siton Rebucas.
+            I am a Bachelor of Science in Animation
+            and Multimedia Arts student at Universty
+            of Northwestern Mindanao.   
+        </p>
+        <p>
+            I enjoy creating digital designs, exploring
+            multimedia, learning new technologies, and
+            improving my creative skills.
+        </p>
+        <p>
+            Outside academics, I am interested in
+            finding opportunities to earn through my
+            digital skills and creative work.
+        </p>
+        <p>
+            My goal is to graduate, become successful
+            in my chosen field, and provide a comfortable
+            life for my family.
+        </p>
+    </div>
+</section>
+<section id="contacts" class="page">
+    <h3>Let's Connect</h3>
+    <h2>Get In Touch</h2>
+    <p>
+        Have a question, project, or collaboration idea?
+        Feel free to get in touch with me.
+    </p>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>📧 Email: nieljohnrebucas@nmsc.edu.ph</p>
+            <p>📍 Location: Bintana Tangub City, Misamis Occidental</p>
+            <p>💬 Facebook: <a href="https://www.facebook.com/njohnrebucas01" target="_blank">Message Me</a></p>
+        </div>
+        <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form onsubmit="sendMessage(event)">
+                <input type="text"
+                placeholder="Your Name" required>
+                <input type="email"
+                placeholder="Your Email" required>
+                <textarea
+                placeholder="Your Message"
+                required></textarea>
+                <button type="submit" class="btn">
+                    Submit Message
+                </button>
+            </form>
+            <p id="form-message"></p>
+        </div>
+    </div>
+</section>
+<footer class="site-footer text-center">
+    <p class="footer-line">Niel John S. Rebucas &mdash; University of Northwestern Mindanao &mdash; Bintana Tangub City, Misamis Occidental</p>
+    <p class="footer-line"><a href="contacts.html">Contact</a> &middot; <a href="https://github.com/nieljohnrebucas-pixel/nnieljohncreatives.git" target="_blank" rel="noopener">GitHub Repo</a></p>
+    <p class="mb-0">&copy; 2026 Niel John S. Rebucas | All rights reserved.</p>
+<script>
+function showPage(pageId, button) {
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
+    });
+    document.getElementById(pageId).classList.add('active');
+    document.querySelectorAll('nav button').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    button.classList.add('active');
+    window.scrollTo(0, 0);
+}
+function goTo(pageId) {
+    const buttons = document.querySelectorAll('nav button');
+    buttons.forEach(button => {
+        if (button.textContent.trim().toLowerCase() === pageId) {
+            showPage(pageId, button);
+        }
+    });
+}
+function sendMessage(event) {
+    event.preventDefault();
+    document.getElementById('form-message').textContent =
+        "Thank you for your message!";
+    event.target.reset();
+}
+</script>
+</body>
+</html>
